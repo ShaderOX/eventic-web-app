@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% from "_form_validator.html" import render_field %}
+
+<div class="mx-auto">
+  <div class="container mx-auto row">
+    <div class="col-md mt-5">
+      <form class=" container p-5 bg-black form-control register-form" style="width: 50vw;" method=post>
+        <h3 class="text-center text-white register-form-heading pb-3 mb-5">CREATE EVENT</h3>
+        {{ form.csrf_token }}
+
+        <div class="register-textfield mx-auto my-3">
+          <img src="{{ url_for('static', filename='form_icons/event title.png') }}" class="p-2" height="40" alt="">
+          {{ render_field(form.title, class_="form-control my-3", placeholder=form.title.label.text) }}
+        </div>
+        <ul class="text-danger">
+          {% for error in form.title.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+
+
+        <div class="register-textfield mx-auto my-3">
+          <img src="{{ url_for('static', filename='form_icons/event_head.png') }}" class="p-2" height="40" alt="">
+          {{ render_field(form.head, class_="form-control my-3", placeholder=form.head.label.text) }}
+        </div>
+        <ul class="text-danger">
+          {% for error in form.head.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+
+        <div class="register-textfield mx-auto my-3">
+          <img src="{{ url_for('static', filename='form_icons/contact.png') }}" class="p-2" height="40" alt="">
+          {{ render_field(form.contact, class_="form-control my-3", placeholder=form.contact.label.text) }}
+        </div>
+        <ul class="text-danger">
+          {% for error in form.contact.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+
+        <div class="register-textfield mx-auto my-3">
+          <img src="{{ url_for('static', filename='form_icons/calendar.png') }}" class="p-2" height="40" alt="">
+          {{ render_field(form.date, class_="form-control my-3", placeholder=form.date.label.text) }}
+        </div>
+        <ul class="text-danger">
+          {% for error in form.date.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+
+        <div class="register-textfield mx-auto my-3">
+          <img src="{{ url_for('static', filename='form_icons/time.png') }}" class="p-2" height="40" alt="">
+          {{ render_field(form.time_start, class_="form-control my-3",
+          placeholder=form.time_start.label.text) }}
+        </div>
+        <ul class="text-danger">
+          {% for error in form.time_start.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+
+        <div class="register-textfield mx-auto my-3">
+          <img src="{{ url_for('static', filename='form_icons/time.png') }}" class="p-2" height="40" alt="">
+          {{ render_field(form.time_end, class_="form-control my-3",
+          placeholder=form.time_end.label.text) }}
+        </div>
+        <ul class="text-danger">
+          {% for error in form.time_end.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+
+        <div class="register-textfield mx-auto my-3">
+          <img src="{{ url_for('static', filename='form_icons/event description.png') }}" class="p-2" height="40"
+            alt="">
+          {{ render_field(form.description, class_="form-control my-3",
+          placeholder=form.description.label.text) }}
+        </div>
+        <ul class="text-danger">
+          {% for error in form.description.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+
+        <div class="container">
+          {{ render_field(form.event_type, class_="text-white list-unstyled mx-2 my-3",
+          placeholder=form.event_type.label.text) }}
+        </div>
+        <div class="container">
+          {{ render_field(form.is_ticketed, class_="text-white list-unstyled mx-2 my-3",
+          placeholder=form.is_ticketed.label.text) }}
+        </div>
+
+        <div class="register-textfield mx-auto my-3">
+          <img src="{{ url_for('static', filename='form_icons/ticket price.png') }}" class="p-2" height="40" alt="">
+          {{ render_field(form.ticket_price, class_="form-control my-3",
+          placeholder=form.ticket_price.label.text) }}
+        </div>
+        <ul class="text-danger">
+          {% for error in form.ticket_price.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+        <div class="px-5">
+          <input class="text-white form-control text-center btn btn-lg bg-gradient mx-auto my-3" type=submit
+            value=Register>
+        </div>
+    </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const ticket_field = document.getElementById('ticket_price');
+    const radioButtons = document.getElementsByName('is_ticketed');
+    radioButtons.forEach(radioButton => {
+      radioButton.addEventListener('change', () => {
+        for (btn of radioButtons) {
+          if (btn.checked) {
+            if (btn.value === "Non Ticketed") {
+              ticket_field.disabled = true;
+              ticket_field.value = 0
+            } else {
+              ticket_field.disabled = false;
+              ticket_field.value = ""
+            }
+          }
+        }
+      });
+    });
+  });
+</script>
+
+{% endblock content%}

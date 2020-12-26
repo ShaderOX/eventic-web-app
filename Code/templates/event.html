@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-2">
+    <div class="row">
+        <div class="col text-white col-lg-6 col-sm-12 p-5">
+            <h2 class="text-heading">{{ event.title }}</h2>
+            <span class="lead" style="font-size: 16px;">ORGANIZED BY:</span> <br>
+            <span class="lead">{{ event.head }}</span>
+            <div class="w-25 pt-3" style="color: transparent; border-bottom:2px solid #c3073f;"></div>
+
+            <a href="#" class="btn btn-lg bg-gradient mt-5" style="width: 45%;">Get Tickets</a>
+
+            <div class="my-4">
+                <h2>Event Overview</h2>
+            </div>
+            <div>
+                <span style="font-size: 18px"> <b style="font-weight: 500;">Event Type:</b> {{ event.event_type }} <b
+                        style=" font-weight: 800;">|</b>
+                    <b style="font-weight: 500;">Ticket Price: </b> {{ event.ticket_price }} <br>
+                </span>
+            </div>
+            <div class="mt-4 pr-5">
+                <p>{{ event.description }}</p>
+            </div>
+        </div>
+        <div class="col col-lg-6 col-sm-12 p-5 mt-5">
+            <div class="row text-white ">
+                <div class="col col-lg-3 text-center">
+                    <h3>{{ event.days_left }}</h3>
+                    <div class="mt-5">
+                        <span style="font-size: 12px" class="text-center">DAYS</span>
+                    </div>
+                    <div class="mt-5">
+                        <img class="text-center mx-auto" src="{{ url_for('static', filename='about/calendar.png') }}"
+                            width="80" height="80">
+                    </div>
+                    <div class="mt-5 text-center">
+                        <p>{{ event.date }}</p>
+                    </div>
+                </div>
+                <div class="col col-lg-1"><span>:</span></div>
+                <div class="col col-lg-3 text-center">
+                    <h3>{{ event.hours_left }}</h3>
+                    <div class="mt-5">
+                        <span style="font-size: 12px" class="text-center">HOURS</span>
+                    </div>
+                    <div class="mt-5">
+                        <img class="text-center mx-auto" src="{{ url_for('static', filename='form_icons/time.png') }}"
+                            width="80" height="80">
+                    </div>
+                    <div class="mt-5 text-center">
+                        <p>{{ event.event_span }}</p>
+                    </div>
+                </div>
+                <div class="col col-lg-1"><span>:</span></div>
+                <div class="col col-lg-3 text-center">
+                    <h3>{{ event.minutes_left }}</h3>
+                    <div class="mt-5">
+                        <span style="font-size: 12px" class="text-center">MINUTES</span>
+                    </div>
+                    <div class="mt-5">
+                        <img class="text-center mx-auto" src="{{ url_for('static', filename='about/venue.png') }}"
+                            width="80" height="80">
+                    </div>
+                    <div class="mt-5 text-center">
+                        <p>SEECS Seminar Hall</p>
+                    </div>
+                </div>
+                <div class="col col-lg-1"><span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
