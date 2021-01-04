@@ -8,7 +8,7 @@ load_dotenv('.env')
 # Configs
 HOST = 'localhost'
 PORT = 5000
-DEBUG = True
+DEBUG = False
 
 app = Flask(__name__)
 app.secret_key = os.environ.get('SECRET_KEY')
