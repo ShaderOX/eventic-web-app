@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class=" bg-black">
+    <div class="text-center heading-box mx-auto pt-5">
+        <h1 class="text-gradient text-heading">EVENTIC</h1>
+    </div>
+    <div class="text-white text-center">
+        <div class="container">
+            <p class="about-text mt-5 px-5 mx-5">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores dolores quisquam quae inventore
+                dicta
+                id, ex, similique delectus et tempora animi hic molestiae deserunt distinctio odit? Doloremque
+                aspernatur
+                perspiciatis praesentium blanditiis non sequi ullam quas, ipsum fuga porro ad dicta quasi odio minima
+                sunt
+                voluptate. Fuga, eum. Veniam, praesentium quos nesciunt ea dicta nobis temporibus ipsam voluptas
+                veritatis
+                hic amet?
+            </p>
+        </div>
+        <div class="container row mt-5 pt-5 mx-auto">
+            <div class="col-sm p-5">
+                <img class="img-fluid img-thumbnail" src="{{ url_for('static', filename='about/calendar.png') }}"
+                    alt="Calendar">
+                <h4 class="my-5 about-img-titles">Reminder</h4>
+                <p class="my-2 about-img-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil
+                    blanditiis corrupti
+                    ipsum.Lorem ipsum
+                    dolor sit.</p>
+            </div>
+            <div class="col-sm p-5">
+                <img class="img-fluid img-thumbnail" src="{{ url_for('static', filename='about/marketing.png') }}"
+                    alt="Calendar">
+                <h4 class="my-5 about-img-titles ">Marketing</h4>
+                <p class="my-2 about-img-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil
+                    blanditiis corrupti
+                    ipsum.Lorem ipsum
+                    dolor sit.</p>
+            </div>
+            <div class="col-sm p-5">
+                <img class="img-fluid img-thumbnail" src="{{ url_for('static', filename='about/venue.png') }}"
+                    alt="Calendar">
+                <h4 class="my-5 about-img-titles">Venue</h4>
+                <p class="my-2 about-img-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil
+                    blanditiis corrupti
+                    ipsum.Lorem ipsum
+                    dolor sit.</p>
+            </div>
+        </div>
+
+        <div class="container row mt-5 pt-5 mx-auto">
+            <h4 class="about-create-event-heading">Create An Event Today</h4>
+            <a class="btn mt-3 mb-5 btn-lg bg-gradient about-create-event-btn"
+                href="{{ url_for(endpoint='event_registeration') }}">Create Event</a>
+        </div>
+
+    </div>
+</div>
+{% endblock content %}

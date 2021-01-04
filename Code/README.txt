@@ -1,5 +1,0 @@
-The process for running the application is as follows:
-1. Download Python on your machine
-2. using "pip install -r requirements.txt" install all the required dependancies.
-3. Run the application using "python app.py". A web server will start at localhost:5000
-4. To change the host or port you need to change it in the config.py file

@@ -1,0 +1,164 @@
+body {
+    font-family: 'Poppins';
+    font-weight: 400;
+    background : #1a1a1d;
+}
+
+.navbar-brand {
+    font-weight   : 600;
+    font-size     : 40px;
+    letter-spacing: 5px;
+}
+
+.bg-black {
+    background: #1a1a1d;
+}
+
+.text-while {
+    color: white;
+}
+
+.btn-sm {
+    height        : fit-content;
+    padding-top   : 3px;
+    padding-bottom: 3px;
+
+}
+
+
+.text-black {
+    color: #1a1a1d
+}
+
+.bg-gradient {
+    color           : white;
+    background-image: linear-gradient(to right, #6f2232, #c3073f) !important;
+}
+
+.text-heading {
+    font-weight: 700;
+}
+
+.text-gradient {
+    font-size              : 65px;
+    background             : -webkit-linear-gradient(#6f2232, #c3073f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.heading-box {
+    border-bottom: 3px solid #950740;
+    width        : 60vw;
+}
+
+.img-thumbnail {
+    border    : none;
+    background: transparent;
+    width     : 200px;
+    height    : 200px;
+}
+
+.about-text {
+    font-size: 20px;
+}
+
+.about-img-titles {
+    font-weight: 500;
+    font-size  : 32px;
+}
+
+.about-create-event-heading {
+    font-size  : 45px;
+    font-weight: 600;
+}
+
+.about-create-event-btn {
+    width       : 15vw;
+    margin-left : auto;
+    margin-right: auto;
+}
+
+.about-img-desc {
+    font-size: 20px;
+}
+
+.register-form-heading {
+    font-size     : 35px;
+    font-weight   : 500;
+    letter-spacing: 5px;
+
+    border-bottom: 3px solid silver;
+
+}
+
+.register-form {
+    border       : 5px solid #950740;
+    border-radius: 10px;
+}
+
+
+
+.register-form input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance   : none;
+    appearance        : none;
+    display           : inline-block;
+    width             : 25px;
+    height            : 25px;
+    padding           : 6px;
+    background-clip   : content-box;
+    border            : 2px solid #bbbbbb;
+    background-color  : #e7e6e7;
+    border-radius     : 50%;
+
+}
+
+.register-form input[type="radio"]:checked {
+    background-color: #c3073f;
+}
+
+
+.register-textfield {
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    height         : 40px;
+    margin         : 0;
+    color          : #1a1a1d;
+}
+
+.register-textfield input {
+    border-radius            : 3px;
+    border-top-left-radius   : 0px;
+    border-bottom-left-radius: 0px;
+    height                   : 40px;
+    color                    : #1a1a1d;
+}
+
+.register-textfield img {
+    background-color          : #950740;
+    border-radius             : 3px;
+    border-top-right-radius   : 0px;
+    border-bottom-right-radius: 0px;
+    height                    : 40px;
+
+}
+
+.text-heading-size {
+    font-size: 120px;
+}
+
+.text-heading-subtitle {
+    font-size     : 38px;
+    font-weight   : 400;
+    letter-spacing: 2px;
+}
+
+.learn-more-btn {
+    border: 3px solid #e7e6e7;
+}
+
+.jumbotron-outline {
+    border-right : 2px solid #950740;
+    border-bottom: 2px solid #950740;
+}
