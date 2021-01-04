@@ -4,3 +4,4 @@ code/database__.db
 code/__pycache__
 .gitignore
 __pycache__
+database__.db
